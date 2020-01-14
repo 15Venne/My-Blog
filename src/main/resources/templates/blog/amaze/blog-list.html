@@ -33,12 +33,19 @@
                                 <th:block th:text="${blog.blogTitle}"></th:block>
                             </a>
                             </h1>
+                             
                             <div class="post-content-preview article-body">
-                                <a th:href="@{'/blog/' + ${blog.blogId}}">
+                               
+                                  <a th:href="@{'/blog/' + ${blog.blogId}}">
                                     <img th:src="@{${blog.blogCoverImage}}" alt=""></a>
+                             
+                             		
                             </div>
+                              
+                                  
                             <div class="clearfix topic-footer">
-                                <span class="pull-left time mobile_time">2018-01</span>
+                                <span class="pull-left time mobile_time"
+                                      th:text="${#dates.format(blog.createTime, 'yyyy-MM-dd')}">2018-01</span>
                             </div>
                     </article>
                 </th:block>

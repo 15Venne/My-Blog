@@ -224,6 +224,7 @@
    /* 3 */
    border: 0;
    /* 4 */
+   
  }
  
  /**
@@ -754,7 +755,7 @@
  }
  
  .am-g-fixed {
-   max-width: 1000px;
+   max-width: 1325px;
  }
  
  [class*="am-u-"] {
@@ -1137,7 +1138,7 @@
      width: 25%;
    }
    .am-u-lg-4 {
-     width: 33.33333333%;
+     width: 25%;
    }
    .am-u-lg-5 {
      width: 41.66666667%;
@@ -1149,7 +1150,7 @@
      width: 58.33333333%;
    }
    .am-u-lg-8 {
-     width: 66.66666667%;
+     width: 50%;
    }
    .am-u-lg-9 {
      width: 75%;
@@ -1361,6 +1362,7 @@
    color: #999999;
    background-color: #f8f8f8;
    border-radius: 4px;
+   font-family: 'Microsoft YaHei';
  }
  
  pre code {
@@ -2192,7 +2194,7 @@
  
  @media only screen and (min-width: 1200px) {
    .blog-fixed {
-     max-width: 1200px
+     max-width: 1325px
    }
  }
  
@@ -2951,7 +2953,7 @@
  .sidebar-container {
    color: #bfbfbf;
    font-size: 14px;
-   padding: 0 3%;
+   padding: 0 1.5%;
  }
  
  .sidebar-container .tags a:hover {
@@ -3343,6 +3345,10 @@
    font-weight: normal;
  }
  
+ .post-content-preview img{
+   width:200px;
+ }
+ 
  .post-content-preview:hover {
    color: #0085a1;
    cursor: default;
@@ -3600,7 +3606,7 @@
  }
  
  img {
-   max-width: 100%;
+����max-width: 100%;
  }
  
  code {
@@ -4632,4 +4638,102 @@ aside.comments .comment header .meta {
     color: #9199a1;
     line-height: 18px;
     display: inline-block;
+}
+
+/*新增日历
+https://www.jb51.net/article/88600.htm
+*/
+/* 整体设置 */
+*{margin:0px;padding:0px;}
+ 
+/**
+ * 设置日历的大小
+ */
+ @media only screen and (min-width: 1025px) {
+   .calendar {
+     display: block;
+   }
+ }
+ 
+.calendar{
+  width: 300px;
+  height: 500px;
+  display: block;
+  text-align:center;
+}
+ 
+/**
+ * 设置日历顶部盒子
+ */
+.calendar .calendar-title-box{
+  position: relative;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align:center;
+  border-bottom: 1px solid #ddd;
+}
+ 
+/**
+ * 设置上个月的按钮图标
+ */
+.calendar .prev-month {
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-left: 0px;
+  border-top: 6px solid transparent;
+  border-right: 8px solid #999;
+  border-bottom: 6px solid transparent;
+  cursor: pointer;
+}
+ 
+/**
+ * 设置下个月的按钮图标
+ */
+.calendar .next-month {
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-right: 0px;
+  border-top: 6px solid transparent;
+  border-left: 8px solid #999;
+  border-bottom: 6px solid transparent;
+  cursor: pointer;
+}
+ 
+ 
+/* 设置日历表格样式 */
+.calendar-table{
+  width: 100%;
+  border-collapse: collapse;
+  text-align:center;
+  border:"1";
+}
+ 
+/* 表格行高 */
+.calendar-table tr{
+  height: 30px;
+  line-height: 30px;
+}
+ 
+/* 当前天 颜色特殊显示 */
+.currentDay {
+  color: red;
+}
+ 
+/* 本月 文字颜色 */
+.currentMonth {
+  color: #999;
+}
+ 
+/* 其他月颜色 */
+.otherMonth{
+  color: #ede;
 }

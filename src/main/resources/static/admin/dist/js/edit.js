@@ -149,10 +149,11 @@ $('#saveButton').click(function () {
     var blogStatus = $("input[name='blogStatus']:checked").val();
     var enableComment = $("input[name='enableComment']:checked").val();
     if (isNull(blogCoverImage) || blogCoverImage.indexOf('img-upload') != -1) {
-        swal("封面图片不能为空", {
-            icon: "error",
-        });
-        return;
+        //swal("封面图片不能为空", {
+        //    icon: "error",
+        //});
+        //return;
+    	blogCoverImage = 'http://111.229.110.146/upload/20200107_16472658.jpg';
     }
     var url = '/admin/blogs/save';
     var swlMessage = '保存成功';

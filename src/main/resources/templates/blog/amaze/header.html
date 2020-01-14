@@ -8,6 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Window-target" content="_top"/>
     <link rel="stylesheet" th:href="@{/blog/amaze/css/base.css}">
+    <script>
+	function getHeading(){
+		var slogans =new Array();
+		slogans[0] = "Away! Away!";
+		slogans[1] = "切っ先に栄光止まれ ！";
+		slogans[2] = "May you find your worth in the waking word.";
+		slogans[3] = "Welcome home,good hunter.";
+		slogans[4] = "Would you ever think to love me?";
+		document.getElementById('headSlogan').innerText=slogans[Math.floor(Math.random()*slogans.length)];;
+	
+	
+	}
+</script>
 </head>
 <nav th:fragment="nav-fragment" class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
@@ -27,15 +40,19 @@
                 <li>
                     <a th:href="@{/index}">主页</a>
                 </li>
+                <!--  
                 <li>
                     <a th:href="@{/link}">友链</a>
                 </li>
                 <li>
                     <a th:href="@{/about}">关于</a>
                 </li>
+                -->
+                <!-- 
                 <li>
-                    <a href="https://github.com/ZHENFENG13">GitHub</a>
+                    <a href="https://github.com/ZHENFENG13/My-Blog">GitHub源</a>
                 </li>
+                 -->
             </ul>
         </div>
         <div id="huxblog_navbar">
@@ -44,15 +61,18 @@
                     <li>
                         <a th:href="@{/index}">主页</a>
                     </li>
+                    <!--  
                     <li>
                         <a th:href="@{/link}">友链</a>
                     </li>
                     <li>
                         <a th:href="@{/about}">关于</a>
                     </li>
+                    
                     <li>
-                        <a href="https://github.com/ZHENFENG13">GitHub</a>
+                        <a href="https://github.com/ZHENFENG13/My-Blog">GitHub源</a>
                     </li>
+                    -->
                 </ul>
             </div>
         </div>
@@ -69,14 +89,20 @@
     <!-- /.container -->
 </nav>
 <header th:fragment="header-fragment" class="intro-header"
-        th:style="'background-image:url(' + @{/blog/amaze/images/header.jpg} + ');'">
+        th:style="'background-image:url(' + @{/blog/amaze/images/headerNanjol.jpg} + ');'">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-          <span class="subheading">
-              我不怕千万人阻挡，只怕自己投降
+                <div class="site-heading" style="margin-bottom: 66px;">
+          <span class="subheading" style="color: rgba(0,0,0,0);">
+              \   
           </span>
+          <span class="subheading" id="headSlogan" style="line-height: 4.4;">
+                Wake up！Wake up！
+          </span>
+          <script>
+          		getHeading();
+          </script>
                 </div>
             </div>
         </div>
