@@ -226,7 +226,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public PageResult getBlogsPageByTag(String tagName, int page) {
-        if (PatternUtil.validKeyword(tagName)) {
+        //if (PatternUtil.validKeyword(tagName)) {
             BlogTag tag = tagMapper.selectByTagName(tagName);
             if (tag != null && page > 0) {
                 Map param = new HashMap();
@@ -240,7 +240,7 @@ public class BlogServiceImpl implements BlogService {
                 PageResult pageResult = new PageResult(blogListVOS, total, pageUtil.getLimit(), pageUtil.getPage());
                 return pageResult;
             }
-        }
+        //}
         return null;
     }
 

@@ -118,7 +118,11 @@ public class MyBlogController {
      */
     @GetMapping({"/tag/{tagName}/{page}"})
     public String tag(HttpServletRequest request, @PathVariable("tagName") String tagName, @PathVariable("page") Integer page) {
+    	
+    	System.out.println(tagName);
+    	System.out.println(page);
         PageResult blogPageResult = blogService.getBlogsPageByTag(tagName, page);
+        System.out.println(blogPageResult);
         request.setAttribute("blogPageResult", blogPageResult);
         request.setAttribute("pageName", "标签");
         request.setAttribute("pageUrl", "tag");
